@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício: Parte 5</h1>
+    <button onclick="cliquei()">Clique para calcular</button>
+    <section id="resultado">
+        <p>O resultado aparecerá aqui!</p>
+    </section>
+
+    <script>
+        function cliquei() {
+            let valor = Number(prompt("Digite um valor!"))
+            let dobro = valor * 2
+            let metade = valor / 2
+            let res = document.querySelector('section#resultado')
+            res.innerHTML = `<p> O dobro de ${valor} é ${dobro} e a metade é ${metade}!`
+        }
+    </script>
+</body>
+</html>

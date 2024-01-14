@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício: Parte 10</h1>
+    <button onclick="botao1()">Botão 1</button>
+    <button onclick="botao2()">Botão 2</button>
+    <button onclick="botao3()">Botão 3</button>
+    <button onclick="botao4()">Botão 4</button>
+    <section id="resposta">
+        <p>Aqui aparecerá as ações!</p>
+    </section>
+    <script>
+
+        let resposta = document.querySelector("section#resposta");
+
+        function botao1() {
+            resposta.innerHTML += "<p> Clicou no botão 1"
+        }
+
+        function botao2() {
+            resposta.innerHTML += "<p> Clicou no botão 2"
+        }
+
+        function botao3() {
+            resposta.innerHTML += "<p> Clicou no botão 3"
+        }
+
+        function botao4() {
+            resposta.innerHTML += "<p> Clicou no botão 4"
+        }
+    </script>
+</body>
+</html>

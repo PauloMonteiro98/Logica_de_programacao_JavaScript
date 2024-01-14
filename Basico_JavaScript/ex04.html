@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício: Parte 4</h1>
+    <button onclick="cliquei()">Clique aqui</button>
+    <section id="resultado">
+        <p>Aqui aparacerá o resultado!</p>
+    </section>
+    <script>
+    function cliquei() {
+        let nome = prompt('Qual seu nome?')
+        let res = window.document.getElementById('resultado')
+        res.innerHTML = `<p> Olá, ${nome}! É um prazer te conhecer!`
+    };
+    </script>
+
+</body>
+</html>

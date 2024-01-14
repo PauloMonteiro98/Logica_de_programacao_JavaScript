@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício: Parte 9</h1>
+    <button onclick="cliquei()">Cliques</button>
+    <button onclick="zerei()">Zerar contador</button>
+    <section id="resposta">
+        <p>Aqui aparecerá a quantidade de cliques: <mark>0</mark></p>
+    </section>
+    <script>
+        let contador = 0
+        function cliquei() {
+            contador ++
+            let res = document.querySelector("section#resposta")
+            res.innerHTML = `<p> Aqui aparecerá a quantidade de cliques: <mark>${contador}</mark>`
+        }
+
+        function zerei() {
+            contador = 0
+            let res = document.querySelector("section#resposta")
+            res.innerHTML = `<p> Aqui aparecerá a quantidade de cliques: <mark>${contador}</mark>`
+        }
+    </script>
+</body>
+</html>

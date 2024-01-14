@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício: Parte 6</h1>
+    <button onclick="cliquei()">Iniciar a soma</button>
+    <section id="res">
+        <p>Aqui aparecerá o resultado!</p>
+    </section>
+
+    <script>
+        function cliquei() {
+            let n1 = Number(prompt("Primeiro número"));
+            let n2 = Number(prompt("Segundo número"));
+            let resultado = (n1 + n2)
+
+            let resposta = document.querySelector('section#res')
+            resposta.innerHTML = `<p> A soma entre  <mark>${n1}</mark> e <mark>${n2}</mark> é igual a <b>${resultado}</b>!`
+        }
+
+    </script>
+</body>
+</html>

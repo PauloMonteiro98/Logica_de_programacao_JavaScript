@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício: Parte 7</h1>
+    <button onclick="cliquei()">Calcular média</button>
+    <section id="resposta">
+        <p>Aqui aparecerá o resultado!</p>
+    </section>
+
+    <script>
+        function cliquei(){
+            let nome = prompt("Qual o nome do aluno?");
+            let nota1 = Number(prompt("Qual foi a primeira nota?"));
+            let nota2 = Number(prompt("Qual foi a segunda nota?"));
+            let media = (nota1 + nota2) /2
+
+            let res = document.querySelector("section#resposta");
+            res.innerHTML = `<p> Calculando a média final de <mark>${nome}</mark>.
+                             <p> As notas obtidas foram <mark>${nota1} e ${nota2}</mark>.
+                             <p> A média final será <mark>${media}</mark>.`
+        }
+
+
+    </script>
+</body>
+</html>
