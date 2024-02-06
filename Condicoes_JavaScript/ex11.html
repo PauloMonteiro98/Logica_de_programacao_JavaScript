@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>olá, mundo</title>
+    <style>
+        *, body{
+            font-family: Arial;
+        }
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Média do aluno</h2>
+    <button id="botão" onclick="cliquei()">Calcular média</button>
+    <section id="principal">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+    <script>
+        function cliquei() {
+            let nome = prompt('Qual o nome do aluno?');
+            let nt1 = Number(prompt(`Qual foi a primeira nota de ${nome}?`));
+            let nt2 = Number(prompt(`Além de ${nt1}, qual foi a outra nota de ${nome}?`));
+            let media = (nt1 + nt2)/2
+
+            let msg
+            if(media >= 60){
+                msg = "Parabéns!"
+            }
+            else {
+                msg = "Estude mais um pouco!"
+            }
+            let res = document.getElementById('principal')
+            res.innerHTML = `<p>Calculando a média final de <mark>${nome}</mark>.</p>`
+            res.innerHTML += `<p>As notas obtidas foram <mark>${nt1} e ${nt2}</mark>.</p>`
+            res.innerHTML += `<p>A média final será <mark>${media}</mark>.</p>`
+            res.innerHTML += `<p>A mensagem que temos é: <strong><span style="color:red;">${msg}</span></strong>.</p>`    
+        }    
+    </script>
+</body>
+</html>
