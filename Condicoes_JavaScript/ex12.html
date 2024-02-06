@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mundo</title>
+    <style>
+        *,body{
+            font-family: Arial;
+        }
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>É par ou é ímpar?</h2>
+    <button onclick="aperte()">Clique para iniciar</button>
+    <section id="principal">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+    <script>
+        function aperte() {
+            let num = Number(prompt('Digite um número!'));
+            let msg
+            if(num % 2 == 0){
+                msg = "Par!"
+            }
+            else {
+                msg = "Impar"
+            }
+
+            let res = document.querySelector('section#principal')
+            res.innerHTML = `<p>O número <strong>${num}</strong> que foi digitado é <strong>${msg}</strong>!</p>`    
+        }    
+    </script>
+</body>
+</html>
