@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mundo</title>
+    <style>
+        *,body{
+            font-family: Arial;
+        }
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Maior valor</h2>
+    <button onclick="aperte()">Clique para começar</button>
+    <section id="principal">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+    <script>
+        function aperte() {
+            let num1 = Number(prompt('Digite um número!'));
+            let num2 = Number(prompt('Digite outro número!'));
+
+            let msg
+            if(num1 != num2){
+                max = Math.max(num1, num2)
+                msg = `o maior valor é <strong>${max}</strong>`
+            }
+            else {
+                 msg = "ambos são <strong>IGUAIS</strong>"
+            }
+
+            let res = document.querySelector('section#principal')
+            res.innerHTML = `<p>Analisando os valores <mark>${num1}</mark> e <mark>${num2}</mark>, ${msg}.</p>`    
+        }    
+    </script>
+</body>
+</html>
