@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mundo</title>
+    <style>
+        *,body{
+            font-family: Arial;
+        }
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interagindo com o sistema</h2>
+    <button onclick="aperte()">Clique para começar</button>
+    <section id="principal">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+    <script>
+        function aperte() {
+            const data = new Date();
+            const dataFormatada = data.toLocaleDateString();
+            const hora = data.getHours();
+            const minuto = data.getMinutes();
+            const segundo = data.getSeconds();
+
+            let res = document.getElementById('principal')
+            res.innerHTML = `<p> O que eu recebi do sistema foi <mark>HORA: ${hora}:${minuto}:${segundo} e DATA: ${dataFormatada}</mark></p>`
+        }
+    </script>
+</body>
+</html>
